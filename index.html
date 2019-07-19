@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Summernote</title>
+  <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css" rel="stylesheet">
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script> 
+  <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js"></script> 
+  <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote.css" rel="stylesheet">
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote.js"></script>
+  <script src="./summernote-ext-print.js"></script>
+  <script src="https://printjs-4de6.kxcdn.com/print.min.js"></script>
+  <link href="https://printjs-4de6.kxcdn.com/print.min.css" rel="stylesheet">
+</head>
+<body>
+    <button id="edit" class="btn btn-primary" onclick="edit()" type="button">Editar</button>
+    <button id="save" class="btn btn-primary" onclick="save()" type="button">Guardar</button>
+    <button type="button" onclick="printJS('docs/printjs.pdf')">
+      Print PDF
+   </button>
+   <button type="button" onclick="printJS({ printable: 'summernote', type: 'html', documentTitle: null })">
+      Print Form
+   </button>
+   <button type="button" onclick="printJS({ printable: 'summernote', type: 'html', header: 'PrintJS - Form Element Selection' })">
+      Print Form with Header
+   </button>
+
+    <div class="click2edit"  id="summernote">summernote</div>
+    <!--<div id="summernote"><p>Hello Summernote</p></div>-->
+  <script src="./editor.js"></script>
+</body>
+</html>
